@@ -1,89 +1,9 @@
-# from tkinter import *
-# import pandas
-# import random
-# import time
-# data = pandas.read_csv("./data/french_words.csv")
-# # french = random.choice(data.French)
-# # print(french)
-# french = random.choice(data.French)
-# english = data[data['French'] == french]['English'].values[0]
-# # print(english)
-# # print(french)
-# def new_card():
-#     global french, english, timer
-#     window.after_cancel(timer)
-#     french = random.choice(data.French)
-#     english = data[data['French'] == french]['English'].values[0]
-#     #new random French word
-#     french = random.choice(data['French'])
-#     canvas.itemconfig(word, text=french, fill="black")
-#     canvas.itemconfig(title, text="French", fill="black")
-#     canvas.itemconfig(card_image, image=front_image)
-#     timer = window.after(3000, flip_card)
-#
-#
-#
-#
-# def flip_card():
-#     canvas.itemconfig(card_image, image=back_image)
-#     canvas.itemconfig(title, text="English")
-#     canvas.itemconfig(word, text=english)
-#
-#
-# def is_know():
-#     french.remove
-#
-#
-#
-#
-# BACKGROUND_COLOR = "#B1DDC6"
-# window = Tk()
-# window.title("My First GUI Program")
-# window.config(padx=50, pady=50, background=BACKGROUND_COLOR)
-# timer = window.after(3000, func=flip_card)
-#
-# # canvas = Canvas(width=800, height=526)
-# # front_image= PhotoImage(file="./images/card_front.png")
-# # canvas.create_image(400, 263, image=front_image)
-# # canvas.grid(column=0, row=0, columnspan=2)
-# # canvas.config(background=BACKGROUND_COLOR, highlightthickness=0)
-# # title = canvas.create_text(400, 150, text="", font=("Ariel", 40, "italic"))
-# # word = canvas.create_text(400, 263, text="", font=("Ariel", 60, "bold"))
-# canvas = Canvas(width=800, height=526)
-# front_image = PhotoImage(file="./images/card_front.png")
-# back_image = PhotoImage(file="./images/card_back.png")
-# card_image = canvas.create_image(400, 263, image=front_image)
-# canvas.grid(column=0, row=0, columnspan=2)
-# canvas.config(background=BACKGROUND_COLOR, highlightthickness=0)
-# title = canvas.create_text(400, 150, text="French", font=("Ariel", 40, "italic"))
-# word = canvas.create_text(400, 263, text=french, font=("Ariel", 60, "bold"))
-#
-#
-# # buttons
-# wrong_image = PhotoImage(file="./images/wrong.png")
-# unknown_button = Button(image=wrong_image, highlightthickness=0, command=new_card)
-# #unknown_button.config(highlightthickness=0, background=BACKGROUND_COLOR)
-#
-#
-# unknown_button.grid(row = 1, column =0)
-# right_image = PhotoImage(file="./images/right.png")
-# known_button = Button(image=right_image,highlightthickness=0, command=is_know)
-# #unknown_button.config(highlightthickness=0, background=BACKGROUND_COLOR)
-# known_button.grid(row=1, column=1)
-#
-# new_card()
-#
-#
-#
-#
-# window.mainloop()
-#
 from tkinter import *
 import pandas as pd
 import random
 import os
 
-# Check if words_to_learn.csv exists
+# if words_to_learn.csv exists
 if os.path.exists("words_to_learn.csv"):
     data = pd.read_csv("words_to_learn.csv")
 else:
@@ -118,7 +38,7 @@ window = Tk()
 window.title("Flashcards")
 window.config(padx=50, pady=50, background=BACKGROUND_COLOR)
 
-# Set up canvas
+# canvas
 canvas = Canvas(width=800, height=526)
 front_image = PhotoImage(file="./images/card_front.png")
 back_image = PhotoImage(file="./images/card_back.png")
