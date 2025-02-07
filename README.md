@@ -6,6 +6,9 @@ A simple flashcard application built with Tkinter to help you learn French words
 - 📂 Customizable word lists – simply upload a CSV file with your preferred language.
 - 🔄 Auto-flipping cards – words are shown for a few seconds before revealing the translation.
 - ♻️ Focused learning – words you don’t know will keep appearing until mastered.
+- 📊 Built with Pandas – efficiently loads and processes CSV data.
+- 📁 Organized storage – words are stored in a /data folder.
+- 📝 Separate file for known words – learned words are moved to a different file for better tracking.
 - 🎨 Minimal & user-friendly interface for a smooth learning experience.
 
 ![image](https://github.com/user-attachments/assets/4656361b-a2d4-4b21-a5d8-a3f012694405)
